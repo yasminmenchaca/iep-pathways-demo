@@ -299,6 +299,13 @@ button.btn {
   line-height: 1.6;
 }
 
+/* Yellow highlighter stroke behind a key word (the logo's light bulb color) */
+.highlight {
+  background: linear-gradient(transparent 62%, var(--yellow) 62%, var(--yellow) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+
 /* Small round photo shown beside the intro on phones */
 .hero__avatar {
   display: none;
@@ -343,7 +350,7 @@ button.btn {
 /* Experience stats
    -------------------------------------------------------------------------- */
 .stats-band {
-  border-top: 1px solid var(--line);
+  border-top: 3px solid var(--yellow);
   border-bottom: 1px solid var(--line);
   background: var(--aqua);
 }
@@ -447,7 +454,7 @@ button.btn {
   height: 44px;
   margin-bottom: 20px;
   border-radius: 50%;
-  background: var(--navy);
+  background: var(--olive);
   color: var(--white);
   font-size: 1.125rem;
   font-weight: 700;
