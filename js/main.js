@@ -1,4 +1,29 @@
 (function () {
+  // Menu button (narrow screens): open and close the menu links.
+  var menuToggle = document.querySelector('.menu-toggle');
+  var mainNav = document.getElementById('main-nav');
+
+  function setMenu(open) {
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mainNav.classList.toggle('is-open', open);
+  }
+
+  menuToggle.addEventListener('click', function () {
+    setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  // Close after choosing a link, or on Escape.
+  mainNav.addEventListener('click', function (event) {
+    if (event.target.closest('a')) setMenu(false);
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      menuToggle.focus();
+    }
+  });
+
   // Contact form (demo): validate, then show a message instead of sending.
   var form = document.getElementById('contact-form');
   var status = document.getElementById('form-status');
