@@ -657,6 +657,25 @@ button.btn {
 .field select { background: var(--white); }
 .field textarea { resize: vertical; }
 
+/* Consent checkbox: box on the left, wrapped text beside it */
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.consent input {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin: 1px 0 0;
+  accent-color: var(--navy);
+  cursor: pointer;
+}
+.consent a { font-weight: 600; }
+
 .form__status {
   margin: 0;
   font-size: 1rem;

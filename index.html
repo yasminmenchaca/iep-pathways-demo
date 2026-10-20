@@ -24,8 +24,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&amp;display=swap">
   <!-- Bump ?v= whenever styles.css or main.js changes, so browsers fetch the new file -->
-  <link rel="stylesheet" href="css/styles.css?v=3">
-  <script src="js/main.js?v=3" defer></script>
+  <link rel="stylesheet" href="css/styles.css?v=4">
+  <script src="js/main.js?v=4" defer></script>
 </head>
 <body>
 
@@ -213,6 +213,10 @@
           </label>
           <label class="field"><span>How can I help? <span class="field__hint">(just a few sentences)</span></span>
             <textarea name="message" rows="5" required></textarea>
+          </label>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>I agree that Intuitive Education Pathways may keep this information to reply to me, and I can ask for it to be deleted at any time. <a href="https://www.intuitiveeducationpathways.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
           </label>
           <button class="btn" type="submit">Send message</button>
           <p class="form__status" id="form-status" role="status" aria-live="polite"></p>

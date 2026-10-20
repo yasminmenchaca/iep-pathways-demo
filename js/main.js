@@ -32,8 +32,11 @@
     event.preventDefault();
 
     if (!form.checkValidity()) {
+      var fieldsMissing = form.querySelector('input:not([type="checkbox"]):invalid, textarea:invalid');
       status.classList.add('form__status--error');
-      status.textContent = 'Please fill in your name, a valid email, and a short message.';
+      status.textContent = fieldsMissing
+        ? 'Please fill in your name, a valid email, and a short message, and check the box to agree.'
+        : 'Please check the box to agree before sending.';
       var firstInvalid = form.querySelector(':invalid');
       if (firstInvalid) firstInvalid.focus();
       return;
